@@ -192,3 +192,43 @@ such as Great Expectations or Soda.
 
 In this module, validation is implemented manually to develop a
 clear understanding of structure, assumptions, and data quality.
+
+# API Text Data Project
+
+## Overview
+
+This project retrieves structured text data from a web API and processes it through an EVTL pipeline.
+
+The pipeline:
+- extracts JSON data from an API
+- validates the structure and required fields
+- transforms the data into a structured table
+- engineers text-based features for analysis
+- loads the results into a processed CSV file
+
+## My Applied Project
+
+I extended the example by creating my own custom validation and transformation stages.
+
+My project focuses on analyzing API post data by measuring title and body length, filtering posts, and classifying them into content detail groups.
+
+## What I Changed
+
+I added:
+- custom raw and processed file outputs
+- required-key validation
+- `total_length`
+- `title_word_count`
+- `body_word_count`
+- `body_size_group`
+- `content_detail_group`
+
+I also filtered the dataset to keep only posts with longer body text.
+
+## Why It Matters
+
+These changes make the dataset more analysis-ready and show how API-derived text can be structured for downstream NLP or reporting tasks.
+
+## Key Insight
+
+Feature engineering helps turn raw JSON records into more useful analytical data. By adding length-based categories, I was able to group and compare posts in a more meaningful way.
