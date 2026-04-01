@@ -57,3 +57,152 @@ shape: (5, 6)
 2026-03-27 12:13:46 | INFO | CI | ========================
 2026-03-27 12:13:46 | INFO | CI | Pipeline executed successfully!
 2026-03-27 12:13:46 | INFO | CI | ========================
+2026-04-01 01:01:03 | INFO | CI | === RUN START ===
+2026-04-01 01:01:03 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-04-01 01:01:03 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-04-01 01:01:03 | INFO | CI | python=3.14.3
+2026-04-01 01:01:03 | INFO | CI | os=Windows 11
+2026-04-01 01:01:03 | INFO | CI | shell=powershell
+2026-04-01 01:01:03 | INFO | CI | cwd=.
+2026-04-01 01:01:03 | INFO | CI | github_actions=False
+2026-04-01 01:01:03 | INFO | CI | START PIPELINE
+2026-04-01 01:01:03 | INFO | CI | ROOT_PATH = .
+2026-04-01 01:01:03 | INFO | CI | DATA_PATH = data
+2026-04-01 01:01:03 | INFO | CI | RAW_PATH = data\raw
+2026-04-01 01:01:03 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-01 01:01:03 | INFO | CI | ========================
+2026-04-01 01:01:03 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-01 01:01:03 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
+2026-04-01 01:01:04 | INFO | CI | SINK PATH = data\raw\case_raw.json
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-04-01 01:01:04 | INFO | CI | Top-level type: list
+2026-04-01 01:01:04 | INFO | CI | Keys in first record: ['userId', 'id', 'title', 'body']
+2026-04-01 01:01:04 | INFO | CI | Field types:
+2026-04-01 01:01:04 | INFO | CI | userId: int
+2026-04-01 01:01:04 | INFO | CI | id: int
+2026-04-01 01:01:04 | INFO | CI | title: str
+2026-04-01 01:01:04 | INFO | CI | body: str
+2026-04-01 01:01:04 | INFO | CI | Validation passed.
+2026-04-01 01:01:04 | INFO | CI | Sink: validated JSON object
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | Transformation complete.
+2026-04-01 01:01:04 | INFO | CI | DataFrame preview:
+shape: (5, 6)
+┌─────────┬─────────┬─────────────────────────┬────────────────────────┬──────────────┬─────────────┐
+│ user_id ┆ post_id ┆ title                   ┆ body                   ┆ title_length ┆ body_length │
+│ ---     ┆ ---     ┆ ---                     ┆ ---                    ┆ ---          ┆ ---         │
+│ i64     ┆ i64     ┆ str                     ┆ str                    ┆ u32          ┆ u32         │
+╞═════════╪═════════╪═════════════════════════╪════════════════════════╪══════════════╪═════════════╡
+│ 1       ┆ 1       ┆ sunt aut facere         ┆ quia et suscipit       ┆ 74           ┆ 158         │
+│         ┆         ┆ repellat provi…         ┆ suscipit recu…         ┆              ┆             │
+│ 1       ┆ 2       ┆ qui est esse            ┆ est rerum tempore      ┆ 12           ┆ 206         │
+│         ┆         ┆                         ┆ vitae                  ┆              ┆             │
+│         ┆         ┆                         ┆ sequi …                ┆              ┆             │
+│ 1       ┆ 3       ┆ ea molestias quasi      ┆ et iusto sed quo iure  ┆ 59           ┆ 164         │
+│         ┆         ┆ exercitatio…            ┆ voluptat…              ┆              ┆             │
+│ 1       ┆ 4       ┆ eum et est occaecati    ┆ ullam et saepe         ┆ 20           ┆ 190         │
+│         ┆         ┆                         ┆ reiciendis volu…       ┆              ┆             │
+│ 1       ┆ 5       ┆ nesciunt quas odio      ┆ repudiandae veniam     ┆ 18           ┆ 147         │
+│         ┆         ┆                         ┆ quaerat sun…           ┆              ┆             │
+└─────────┴─────────┴─────────────────────────┴────────────────────────┴──────────────┴─────────────┘
+2026-04-01 01:01:04 | INFO | CI | Sink: Polars DataFrame created
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | SINK PATH = data\processed\case_processed.csv
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 01:01:04 | INFO | CI | Pipeline executed successfully!
+2026-04-01 01:01:04 | INFO | CI | ========================
+2026-04-01 13:37:09 | INFO | CI | === RUN START ===
+2026-04-01 13:37:09 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-04-01 13:37:09 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-04-01 13:37:09 | INFO | CI | python=3.14.3
+2026-04-01 13:37:09 | INFO | CI | os=Windows 11
+2026-04-01 13:37:09 | INFO | CI | shell=powershell
+2026-04-01 13:37:09 | INFO | CI | cwd=.
+2026-04-01 13:37:09 | INFO | CI | github_actions=False
+2026-04-01 13:37:09 | INFO | CI | START PIPELINE
+2026-04-01 13:37:09 | INFO | CI | ROOT_PATH = .
+2026-04-01 13:37:09 | INFO | CI | DATA_PATH = data
+2026-04-01 13:37:09 | INFO | CI | RAW_PATH = data\raw
+2026-04-01 13:37:09 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-01 13:50:55 | INFO | CI | === RUN START ===
+2026-04-01 13:50:55 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-04-01 13:50:55 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-04-01 13:50:55 | INFO | CI | python=3.14.3
+2026-04-01 13:50:55 | INFO | CI | os=Windows 11
+2026-04-01 13:50:55 | INFO | CI | shell=powershell
+2026-04-01 13:50:55 | INFO | CI | cwd=.
+2026-04-01 13:50:55 | INFO | CI | github_actions=False
+2026-04-01 13:50:55 | INFO | CI | START PIPELINE
+2026-04-01 13:50:55 | INFO | CI | ROOT_PATH = .
+2026-04-01 13:50:55 | INFO | CI | DATA_PATH = data
+2026-04-01 13:50:55 | INFO | CI | RAW_PATH = data\raw
+2026-04-01 13:50:55 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
+2026-04-01 13:50:55 | INFO | CI | SINK PATH = data\raw\sandra_raw.json
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-04-01 13:50:55 | INFO | CI | Top-level type: list
+2026-04-01 13:50:55 | INFO | CI | Keys in first record: ['userId', 'id', 'title', 'body']
+2026-04-01 13:50:55 | INFO | CI | Field types:
+2026-04-01 13:50:55 | INFO | CI | userId: int
+2026-04-01 13:50:55 | INFO | CI | id: int
+2026-04-01 13:50:55 | INFO | CI | title: str
+2026-04-01 13:50:55 | INFO | CI | body: str
+2026-04-01 13:50:55 | INFO | CI | Validation passed for 100 records.
+2026-04-01 13:50:55 | INFO | CI | Sink: validated JSON object
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | Transformation complete.
+2026-04-01 13:50:55 | INFO | CI | Rows after filtering: 62
+2026-04-01 13:50:55 | INFO | CI | Columns: ['user_id', 'post_id', 'title', 'body', 'title_length', 'body_length', 'total_length', 'title_word_count', 'body_word_count', 'body_size_group']
+2026-04-01 13:50:55 | INFO | CI | DataFrame preview:
+shape: (5, 10)
+┌─────────┬─────────┬────────────┬────────────┬───┬────────────┬────────────┬───────────┬───────────┐
+│ user_id ┆ post_id ┆ title      ┆ body       ┆ … ┆ total_leng ┆ title_word ┆ body_word ┆ body_size │
+│ ---     ┆ ---     ┆ ---        ┆ ---        ┆   ┆ th         ┆ _count     ┆ _count    ┆ _group    │
+│ i64     ┆ i64     ┆ str        ┆ str        ┆   ┆ ---        ┆ ---        ┆ ---       ┆ ---       │
+│         ┆         ┆            ┆            ┆   ┆ u32        ┆ u32        ┆ u32       ┆ str       │
+╞═════════╪═════════╪════════════╪════════════╪═══╪════════════╪════════════╪═══════════╪═══════════╡
+│ 1       ┆ 1       ┆ sunt aut   ┆ quia et    ┆ … ┆ 232        ┆ 9          ┆ 20        ┆ medium    │
+│         ┆         ┆ facere     ┆ suscipit   ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ repellat   ┆ suscipit   ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ provi…     ┆ recu…      ┆   ┆            ┆            ┆           ┆           │
+│ 1       ┆ 2       ┆ qui est    ┆ est rerum  ┆ … ┆ 218        ┆ 3          ┆ 28        ┆ long      │
+│         ┆         ┆ esse       ┆ tempore    ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆            ┆ vitae      ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆            ┆ sequi …    ┆   ┆            ┆            ┆           ┆           │
+│ 1       ┆ 3       ┆ ea         ┆ et iusto   ┆ … ┆ 223        ┆ 9          ┆ 23        ┆ medium    │
+│         ┆         ┆ molestias  ┆ sed quo    ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ quasi exer ┆ iure       ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ citatio…   ┆ voluptat…  ┆   ┆            ┆            ┆           ┆           │
+│ 1       ┆ 4       ┆ eum et est ┆ ullam et   ┆ … ┆ 210        ┆ 4          ┆ 25        ┆ long      │
+│         ┆         ┆ occaecati  ┆ saepe      ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆            ┆ reiciendis ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆            ┆ volu…      ┆   ┆            ┆            ┆           ┆           │
+│ 1       ┆ 6       ┆ dolorem    ┆ ut         ┆ … ┆ 228        ┆ 6          ┆ 23        ┆ long      │
+│         ┆         ┆ eum magni  ┆ aspernatur ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ eos        ┆ corporis   ┆   ┆            ┆            ┆           ┆           │
+│         ┆         ┆ aperiam …  ┆ harum n…   ┆   ┆            ┆            ┆           ┆           │
+└─────────┴─────────┴────────────┴────────────┴───┴────────────┴────────────┴───────────┴───────────┘
+2026-04-01 13:50:55 | INFO | CI | Sink: Polars DataFrame created
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | SINK PATH = data\processed\sandra_processed.csv
+2026-04-01 13:50:55 | INFO | CI | ========================
+2026-04-01 13:50:55 | INFO | CI | Pipeline executed successfully!
+2026-04-01 13:50:55 | INFO | CI | ========================
